@@ -1,0 +1,281 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Admin",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9001,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/Admin",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/User/saveuser",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9002,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/User/saveuser",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admin/login",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9002,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/Admin/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/airline/saveinventory",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Airline/saveinventory",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/Booking/Bookticket",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Booking/Bookticket",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/Booking/History/{emailid}",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Booking/History/{emailid}",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/Booking/BookingDetailsonPNR/{PNR}",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Booking/BookingDetailsonPNR/{PNR}",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/Booking/cancel/{pnr}",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Booking/cancel/{pnr}",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/airline/search",
+      "downstreamscheme": "http",
+      "downstreamport": 9003,
+      "DownstreamHost": "localhost",
+
+      "UpstreamPathTemplate": "/api/v1.01/Airline/search",
+      //"UpstreamPathTemplate": "/api/v1.01/flight/Airline",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/GetInventoryList",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/GetInventoryList",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/GetAirlinelist",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/GetAirlinelist",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/GetAirlinelistbyairline",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/GetAirlinelistbyairline",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/getinventorybyid",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/getinventorybyid",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/getairlinedrpdwn",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/getairlinedrpdwn",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Airline/saveairline",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Airline/saveairline",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/savepassanger",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Booking/savepassanger",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/adddiscount",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Booking/adddiscount",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/getdiscountlist",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Booking/getdiscountlist",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/getdiscountlistbyid",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Booking/getdiscountlistbyid",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Booking/getdiscountlistdrpdwn",
+      "DownstreamScheme": "http",
+      "DownstreamPort": 9003,
+      "DownstreamHost": "localhost",
+      "UpstreamPathTemplate": "/api/v1.01/Booking/getdiscountlistdrpdwn",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeoutValue": 5000
+      }
+    }
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}
